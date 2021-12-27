@@ -1,0 +1,28 @@
+https://www.defensecode.com/public/DefenseCode_Unix_WildCards_Gone_Wild.txt
++) operadores wildcard (bu)
+    +) * cualquier caracter, cualquier numero de caracteres
+    +) ? cualquier caracter, solo uno
+    +) [conjunto] un único caracter dentro del conjunto
+        +) [[:upper]] mayúscula
+        +) [[:lower]] minúscula
+    +) [a-z] el - indica un rango
+    +) ~ representa a home
+            +) ejemplo: ls ~/D* busca en el home todo lo que
+            empiece por D
++) riesgos
+    +) utilizando *, linux interpreta archivos que comienzan en
+    '-' como argumentos de linea de comandos.
+        +) ejemplo:
+            $ mkdir prueba; cd prueba; mkdir dir1 dir2
+            $ mkdir dir1 dir2
+            $ touch dir1/file1 dir1/file2 dir1/file3 
+            $ touch dir2/file1 dir2/file2 dir2/file3
+            $ touch archivo1, archivo2, archivo3
+            # si tree no está instalado se usa "sudo apt install tree"
+            $ tree
+            # sin -rf
+            # con -rf
+            $ mkdir prueba; cd prueba; mkdir dir1 dir2; touch dir1/file1 dir1/file2 dir1/file3 dir2/file1 dir2/file2 dir2/file3; touch archivo1, archivo2, archivo3; tree
+            # crear archivo utilizando interfaz grafico
+            $ rm *
+

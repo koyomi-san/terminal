@@ -1,0 +1,26 @@
+https://www.youtube.com/watch?v=HiXLkL42tMU fazt
+https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/
+https://ihatetomatoes.net/git-config-tutorial/#:~:text=System%20Git%20config%20controls%20settings,executed%20in%20a%20cascading%20order.
++) configuración de git
+    $ git config --global user.email "alexander.garciac@udea.edu.co"
+    $ git config --global user.name "koyomi"
++) git init: inicia repositorio en la carpeta actual
+    +) areas de git
+        +) editar archivo + guardar -> working directory
+        +) git add archivo -> staying area
+        +) git commit -m "mensaje"-> repository
++) git status: muestra una información sobre en qué area está cada archivo
++) git push: envía los archivos en repository a un repositorio remoto
++) hacer un pull (luego de un init)
+    +) git remote add origin url: toma como origen para un repository el repositorio en la url
+    +) git fetch --all
+    +) git pull: actualiza el repository local con los cambios del repositorio remoto
++) git clone url: descarga el código que está en el url
++) git log: seguimiento de todos los commit que se han realizado
++) git checkout -- [archivo]: revierte el archivo modificado hasta el estado del último commit
++) git diff archivo: muestra los cambios que se han hecho a algún archivo
++) .gitignore: archivo que indica qué carpetas y archivos son ignorados y no se montan al commit (se ponen los nombres de los archivos espaciados por enter)
++) git branch:
+    $ git branch: por si solo muestra las ramas existentes
+    $ git branch [nueva_rama]: crea una nueva rama
+    $ git checkout [nombre_rama]: se cambia de la rama catual a la rama especificada

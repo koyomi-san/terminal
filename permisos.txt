@@ -1,0 +1,28 @@
+https://www.tecmint.com/copy-file-permissions-and-ownership-to-another-file-in-linux/
+https://blog.desdelinux.net/permisos-basicos-en-gnulinux-con-chmod/
++) chmod: cambia permisos [p] = [wrd] 
+    +) eliminar un permiso:
+        +) chmod -wrx # elimina todos los permisos
+        +) chmod -p # elimina el permiso p
+        +)
+    +) agregar un permiso:
+        +) chmod +wrx # agrega todos los permisos
+        +) chmod +p # agrega el permiso p
+    +) ejemplo:
+        $ mkdir prueba
+        $ touch prueba.txt
+        $ ls -lh
+        # agregar todos los permisos al usuario
+        $ chmod u+wrx prueba.txt; ls -lh
+        # lectura y escritura para el grupo y el usuario, lectura para otros
+        $ chmod 664 prueba.txt; ls -lh
+    +) tomar como referencia los permisos de un archivo de referencia para
+    darselos a otro 
+        +) chmod --reference=archivo_base.txt archivo_destino.txt
+        +) ejemplo:
+            $ touch archivo_base.txt archivo_destino.txt
+            $ chmod 222 archivo_base.txt
+            $ ls -lh
+            $ chmod --reference=archivo_base.txt archivo_destino.txt
+            $ls -lh
+    
