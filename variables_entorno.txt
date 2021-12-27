@@ -1,0 +1,12 @@
+* link simbolicos
+* alias permanentes (alias ls='ls -lh')
+    $ printenv // muestra las variables de entorno
+    $ $HOME // ej: cd $HOME
+    $ $PATH // guarda las rutas de todos los binarios
+        * cada variable de entorno está separada por :
+    * archivo .bashrc // guarda alias y variables de entorno
+        * se abre el archivo
+        * se modifica
+        * se actualiza
+            $ bash
+        

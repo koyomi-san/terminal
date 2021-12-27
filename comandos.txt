@@ -1,0 +1,34 @@
+* variables
+    * https://stackoverflow.com/questions/2314750/how-to-assign-the-output-of-a-bash-command-to-a-variable
+    /* forma larga
+    $ temp=$(pwd) // variables en la terminal (sin espacios, se accede a ella con $temp)
+    $ echo $temp/prueba.txt // retorna /home/koyomi/Desktop/notas/terminal/prueba/prueba.txt
+    $ temp=$(echo $temp/prueba.txt)
+    $ temp=$(echo temp=$(pwd))/prueba.txt forma abreviada
+    */
+* redirecciones
+    * https://www.guru99.com/linux-redirection.html
+    * https://askubuntu.com/questions/435291/add-words-to-a-text-file-using-a-single-terminal-command-no-editors
+        * escribir salidas y errores estandar a archivos
+            * > sobreescribe
+            * >> concatena por defecto en una nueva linea
+    * ejemplo:
+        $ mkdir prueba; cd prueba; touch prueba.txt
+        $ echo 'hola' > prueba.txt; echo 'lola' >> prueba.txt; cat prueba.txt
+        // limpiar
+        $ cd ..; rm -rf prueba 
+* comandos de busqueda
+    $ which nombre_binario // busca en el path y retorna la ruta del binario
+    $ find ruta_origen -name *.txt // retorna rutas de archivos .txt debajo de ruta_origen
+        * modificadores de find
+            $ find ./ -type d -name Documents // solo busca directorios
+            $ find ./ -type f -name nombre // solo busca archivos
+            $ find ./ -size 20M // busca archivos de tamaño superior a 20MB
+            $ find ./ -maxdept profundidad f -name nombre // limite para la profundidad del archivo
+            $ find ./ -not f -name nombre // archivos que no cumplen con el patrón de nombre
+            $ find ./ -delete f -name nombre // borra
+        * ejemplo: buscar archivos .txt,  guardarlos en en un archivo e imprimir
+            $ mkdir prueba; cd prueba; touch prueba.txt
+            $ temp=$(echo temp=$(pwd))/prueba3.txt
+            $ cd; find ./ -name *.txt | tee echo $temp ; cd -; clear
+            $ cd ..; rm -rf prueba; clear
